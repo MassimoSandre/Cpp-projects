@@ -1,0 +1,13 @@
+immaginare la struttura come tabella di variabili con n colonne e m righe
+
+typedef struct sStruttura {
+	1. variabileString[/] 
+	2. variabileInt
+	... variabile
+	n. variabile
+} tStruttura;
+
+tstruttura nStr[m];
+
+inserire una string: strcpy(nStr[/].variabileString, string);
+inserire una int: nStr[/].variabileInt = int; 

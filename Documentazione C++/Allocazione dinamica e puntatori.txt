@@ -1,0 +1,36 @@
+Esempio utilizzo di un puntatore: 
+int v[10];
+int *p;
+p = v;
+
+for(int i = 0; i < 10; i++) {
+	v[i] = i*10;
+}		  
+
+for(int i = 0; i < 10; i++) {
+	cout << *p++ << "\n"; //incrementando di 1 il valore di un puntatore che "punta" ad un vettore, lo stesso punterà alla variabile successiva del vettore
+}
+
+\|/|\|/|\|/|\|/|\|/|\|/|\|/|\|/|\|/|\|/|\|/|\|/|\|/|\|/|\|/|\|/|\|/|\|/|\|/|\|/|\|/|\|/|\|/|\|/|\|/|\
+
+Un puntatore puo essere allocato in un indirizzo di memoria
+
+int p*;
+
+p = malloc(valore); // Esempio: se il puntatore p puntasse ad un vettore di n valori di tipo int, si può scrivere: p = (int*)malloc(n * sizeof(int));
+*p = 222 // la cella di memoria prende il valore specificato 
+
+
+
+free(p); // questo comando permette di deallocare un puntatore
+
+
+nel momento in cui il puntatore viene allocato, in esso vine inserito un indirizzo alla cella di memoria corrisponte. Scrivendo p in qualsiasi comando si farà riferimento all'indirizzo, scrivendo *p, invece, si farà riferimento al contenuto della cella corrispondente all'indirizzo.
+Quindi è possibile fare una cosa del genere:
+	int *punt1;
+	int *punt2;
+	punt1 = (int*)malloc(sizeof(int)); // non essendoci '*' si fa riferimento all'indirizzo
+	punt2 = (int*)malloc(sizeof(int)); // non essendoci '*' si fa riferimento all'indirizzo	
+	*punt1 = 20; // essendoci '*' si fa riferimento alla cella di memoria
+	*punt2 = *punt1; // il valore della cella puntata da punt2 diventa uguale a quello della cella puntata da punt1
+	*punt2 = punt1; //il valore della cella puntata da punt2 diventa uguale all'indirizzo della cella puntata da punt1

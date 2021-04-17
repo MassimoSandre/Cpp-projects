@@ -1,0 +1,15 @@
+COMANDI CONOSCIUTI:
+	FILE *pf; // puntatore file (vedi puntatori)
+
+	pf = fopen(directory, modalità); // apertura file
+
+	if (pf == NULL) {} // verifica effettuata apertura
+
+	while(!feof(pf)) {} // scorre il file fino alla fine
+
+	fprintf(pf, string); // scrive nel file
+
+	fscanf(pf, tipo di valore, variabile di destinazione); // Legge il file e copia in una variabile
+
+	fclose(pf); // chiude il file (liberando il puntatore)
+

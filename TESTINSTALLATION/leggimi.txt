@@ -1,0 +1,21 @@
+﻿I file contenuti in questa cartella sono indispensabili per il funzionamento
+del programma, pertanto si prega di non rimuoverne nessuno: sebbene il programma
+sia in grado di creare i file "input.txt" e "words.txt", la loro rimozione implicherà
+comunque la cancellazione delle parole personalizzate (Anche quelle di default).
+La rimozione dell'eseguibile "wordHandler.exe" implicherà, invece, la perdita della
+possibilità di inserire parole personalizzate, o comunque la possibilità di modificare
+quelle precedentemente inserite.
+
+Il file "words.txt" contiene le parole inserite del test di battitura, ma non è
+processabile dal programma principale, perché non si conosce come l'utente inserira
+le stesse.
+Lo scopo dell'eseguibile "wordHandler.exe" (Scritto in c++) è oviare a questo problema
+di scrivere il file "input.txt", il quale contiene le informazioni necessarie dal 
+programma principale per processare le parole inserite dall'utente durante il runtime.
+
+Non essendo possibile eliminare o spostare nessuno di questi file, per un funzionamento
+completo da parte del programma, si consiglia di creare un collegamento del file
+"TestDiBattitura.exe", il quale sarà completamente indipendente dal resto dei file
+(CHE COMUNQUE DOVRANNO RIMANERE TUTTI NELLA STESSA CARTELLA)
+
+

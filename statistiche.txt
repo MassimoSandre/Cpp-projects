@@ -1,0 +1,8 @@
+
+ln novembre: 985
+
+ln ottobre: 1101
+
+ln settembre: 587 
+
+ln totali: 2673

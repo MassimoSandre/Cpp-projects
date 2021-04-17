@@ -1,0 +1,85 @@
+Esempio fibonacci:
+
+int fibo(int n) {
+	if(n  < 3) {
+		return 1;
+	}
+	else return fibo(n-1)+fibo(n-2);
+} 
+ 
+Esempio MIN MAX:
+
+int MAX(int v[], int n, int m) {
+	if(n < 0) return m;
+	else {
+		if(v[n] > m) {
+			return MAX(v,n-1,v[n]);
+		}
+		else {
+			return MAX(v, n-1,m);
+		}
+	}
+}
+
+int MIN(int v[], int n, int m) {
+	if(n < 0) return m;
+	else {
+		if(v[n] < m) {
+			return MIN(v,n-1,v[n]);
+		}
+		else {
+			return MIN(v, n-1,m);
+		}
+	}
+}
+
+
+
+ESEMPIO SUPREMO DESTRA SINISTRA CENTRO
+
+#include <iostream>
+using namespace std;
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int ric(int v[], int sx, int dx, int ele) {
+	int med;
+	if(sx > dx){
+		return -1;
+	}
+	else {
+		med = (sx+dx)/2;
+		if(ele == v[med]) {
+			return med;
+		}
+		else if (ele < v[med]) {
+			return ric(v, med + 1, dx, ele);
+		}
+		else {
+			return ric(v, sx, med-1, ele);
+		}
+	}
+}
+
+int main(int argc, char** argv) {
+	while(true){
+		int n, ele;
+		cout << "Inserire il numero di elementi da analizzare:\n" ;
+		scanf("%d", &n);
+		system("CLS");
+		int v[n];
+		for(int i = 0; i < n; i++) {
+			cout << "Inserire il valore " << i+1 << " per il vettore:\n";
+			scanf("%d", &v[i]);
+		}
+		cout << "Inserire il valore da ricercare nel vettore:\n";
+		scanf("%d", &ele);
+		int k = ric(v,0,n-1,ele);
+		if(k == -1) {
+			cout << "Nel vettore inserito, non esiste il valore " << ele << "!\n";
+		}
+		else {
+			cout << "Il valore " << ele << " e' presente nella posizione " << k << " del vettore inserito!\n";
+		}
+	}
+	return 0;
+}
