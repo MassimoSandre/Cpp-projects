@@ -1,3 +1,4 @@
+// ciao
 class Frazione {
 protected:
     int numeratore;
